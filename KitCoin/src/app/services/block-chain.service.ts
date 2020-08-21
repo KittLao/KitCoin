@@ -14,7 +14,7 @@ export class BlockChainService {
     this.blockchainInstance = new BlockChain();
     this.walletKeys = [];
     this.blockchainInstance.difficulty = 1;
-    this.blockchainInstance.minePendingTransactions('hi');
+    this.blockchainInstance.minePendingTransactions('Kit Lao');
     this.generateWalletKeys();
   }
 
