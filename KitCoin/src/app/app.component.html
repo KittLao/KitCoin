@@ -1,0 +1,31 @@
+<nav class="navbar navbar-dark bg-dark">
+  <a class="navbar-brand" routerLink="/">
+    <img src="assets/images/logo.png" width="30" 
+    height="30" class="d-inline-block align-top" alt="">
+    &nbsp;KitCoin
+  </a>
+
+  <div>
+    <button routerLink="/new/transaction/pending" class="btn btn-outline-light" *ngIf="thereArePendingTransactions()">
+      Pending transactions
+      <span class="badge badge-light">{{blockchain.pendingTransactions.length}}</span>
+    </button>
+    &nbsp;
+    <button routerLink="/settings" class="btn btn-outline-light">
+      Settings
+    </button>
+    &nbsp;
+    <button routerLink="/new/transaction" class="btn btn-outline-light">
+      Create transaction
+    </button>
+  </div>
+</nav>
+
+<br>
+
+<router-outlet></router-outlet>
+
+<footer class="text-muted text-center" style="margin-top: 150px;">
+  <small> &#169; Copyrights of Kit Lao. </small> 
+  <br>
+</footer>
